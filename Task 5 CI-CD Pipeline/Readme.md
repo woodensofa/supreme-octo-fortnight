@@ -20,7 +20,7 @@ This doc describes how to set up and use a development, continuous integration (
 
 ### Before you begin
 1. Go to Google Cloud Console, on the project selector page, select or create a Google Cloud project. [^1]
-2. In the Cloud Console, activate Cloud Shell. ![Cloud Shell](https://miro.medium.com/max/624/1*SQcTRfQ2Cqoq18yofRsvTQ.png
+2. In the Cloud Console, activate Cloud Shell. ![Cloud Shell](https://github.com/woodensofa/supreme-octo-fortnight/blob/main/Task%205%20CI-CD%20Pipeline/Screenshot%20(52).png
 "Cloud Shell")
 3. 
 
