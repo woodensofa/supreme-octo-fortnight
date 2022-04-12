@@ -72,6 +72,8 @@ The default image identifies the default container image to use for the jobs in 
 The default “before_script” contains the list of commands to execute before each job. In this case, we just set the default GCP project.
 
 This pipleine has two jobs named “build” and “deploy”. The “build” job is run during the “build” stage and the “deploy” job is run during the “deploy” stage. “script” lists the commands to be run for the job.
+![](https://github.com/woodensofa/supreme-octo-fortnight/blob/main/Task%205%20CI-CD%20Pipeline/img/Screenshot%20(3).png?raw=true)
+![](https://github.com/woodensofa/supreme-octo-fortnight/blob/main/Task%205%20CI-CD%20Pipeline/img/Screenshot%20(4).png?raw=true)
 
 **Stage, commit, and push the changes as follows:**
 
@@ -100,6 +102,7 @@ ERROR: Job failed: exit code 1
 
 When we built the app in the Cloud Shell environment, we never had to supply authentication credentials because we were already logged into the GCP environment. Because GitLab is external to Google Cloud Platform, we are going to have supply credentials to allow GitLab CI/CD to access GCP resources.
 
+
 ### Using GCP Credentials in a GitLab CI/CD Pipeline
 
 First, use the GCP Console to create a service account with the appropriate permissions to to build and deploy an app that we can use in the GitLab CI/CD Pipeline.
@@ -112,6 +115,9 @@ From the GCP menu, choose “IAM & Admin | Service Accounts”. Click on the “
 - Service Management | Cloud Run Service Agent
 
 Click on the “CONTINUE” button. Click on the “CREATE KEY” button. Make sure “JSON” is selected and click on the “CREATE” button. The private key will be downloaded to your computer, probably in the “Downloads” folder. Click on the “DONE” button.
+![](https://github.com/woodensofa/supreme-octo-fortnight/blob/main/Task%205%20CI-CD%20Pipeline/img/Screenshot%20(7).png?raw=true)
+![](https://github.com/woodensofa/supreme-octo-fortnight/blob/main/Task%205%20CI-CD%20Pipeline/img/Screenshot%20(8).png?raw=true)
+![](https://github.com/woodensofa/supreme-octo-fortnight/blob/main/Task%205%20CI-CD%20Pipeline/img/Screenshot%20(9).png?raw=true)
 
 Open up the downloaded private key in a text editor.
 
@@ -129,3 +135,8 @@ git push
 ```
 
 Both jobs should complete successfully now. Check that the application is still running. Make a visible change to the views/index.ejs file. Stage, commit, and push the change. Confirm that the change appears on the running application.
+![](https://github.com/woodensofa/supreme-octo-fortnight/blob/main/Task%205%20CI-CD%20Pipeline/img/Screenshot%20(5).png?raw=true)
+![](https://github.com/woodensofa/supreme-octo-fortnight/blob/main/Task%205%20CI-CD%20Pipeline/img/Screenshot%20(6).png?raw=true)
+![](https://github.com/woodensofa/supreme-octo-fortnight/blob/main/Task%205%20CI-CD%20Pipeline/img/Screenshot%20(10).png?raw=true)
+![](https://github.com/woodensofa/supreme-octo-fortnight/blob/main/Task%205%20CI-CD%20Pipeline/img/Screenshot%20(11).png?raw=true)
+![](https://github.com/woodensofa/supreme-octo-fortnight/blob/main/Task%205%20CI-CD%20Pipeline/img/Screenshot%20(12)%20(1).png?raw=true)
