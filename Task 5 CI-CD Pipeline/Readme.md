@@ -10,7 +10,7 @@ This doc describes how to set up and use a development, continuous integration (
 
 ### Architecture overview
 
-![Architecture](https://miro.medium.com/max/624/1*SQcTRfQ2Cqoq18yofRsvTQ.png
+![Architecture](/img/vhjvhkk.png
 "Architecture")
 
 - **Cloud Build** to build and test the application—the "CI" part of the pipeline.
