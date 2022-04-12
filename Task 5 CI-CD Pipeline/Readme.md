@@ -10,7 +10,7 @@ This doc describes how to set up and use a development, continuous integration (
 
 ### Architecture overview
 
-![Architecture](/img/vhjvhkk.png
+![Architecture](https://github.com/woodensofa/supreme-octo-fortnight/blob/main/Task%205%20CI-CD%20Pipeline/img/vhjvhkk.png
 "Architecture")
 
 - **Cloud Build** to build and test the application—the "CI" part of the pipeline.
