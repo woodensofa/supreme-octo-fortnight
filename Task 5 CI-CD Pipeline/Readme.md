@@ -39,6 +39,7 @@ Test the app using “Web Preview” in the Cloud Shell environment. When you ar
 7. Finally, deploy the app to Cloud Run as follows: ```gcloud run deploy cicd2 --image gcr.io/PROJECT-ID/cicd2 --platform managed --region us-west1 --allow-unauthenticated```
 The command will output the URL for the deployed app. Test it out in your browser.[^2]
 ![](https://github.com/woodensofa/supreme-octo-fortnight/blob/main/Task%205%20CI-CD%20Pipeline/img/Screenshot%20(2).png?raw=true)
+![](https://github.com/woodensofa/supreme-octo-fortnight/blob/main/Task%205%20CI-CD%20Pipeline/img/Screenshot%20(13).png?raw=true)
 
 [^1]: In the Google Cloud Console, on the project selector page, select or create a Google Cloud project.It is a good idea to create a new Project on Google Cloud, as it makes it easy to test and teardown afterward, and also for new projects to separate them from others.
 You can click the button next to the Google Cloud Platform logo and then click "Create Project". In the Cloud Console, activate Cloud Shell.
@@ -141,3 +142,4 @@ Both jobs should complete successfully now. Check that the application is still 
 ![](https://github.com/woodensofa/supreme-octo-fortnight/blob/main/Task%205%20CI-CD%20Pipeline/img/Screenshot%20(10).png?raw=true)
 ![](https://github.com/woodensofa/supreme-octo-fortnight/blob/main/Task%205%20CI-CD%20Pipeline/img/Screenshot%20(11).png?raw=true)
 ![](https://github.com/woodensofa/supreme-octo-fortnight/blob/main/Task%205%20CI-CD%20Pipeline/img/Screenshot%20(12)%20(1).png?raw=true)
+![](https://github.com/woodensofa/supreme-octo-fortnight/blob/main/Task%205%20CI-CD%20Pipeline/img/Screenshot%20(14).png?raw=true)
