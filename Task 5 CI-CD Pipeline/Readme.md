@@ -20,9 +20,13 @@ This doc describes how to set up and use a development, continuous integration (
 
 ### Build and Deploy the Application by Hand
 
-1. Make a working project repo in Gitlab, and take note of project SSH URL. I have used sample "cicd2" Express project.
-1. Start up your Google Cloud Shell.
+1. Make a working project repo in Gitlab, and take note of project SSH URL. I have used sample "cicd2" Express project. 
+![](https://github.com/woodensofa/supreme-octo-fortnight/blob/main/Task%205%20CI-CD%20Pipeline/img/Screenshot99.png?raw=true)
+![](https://github.com/woodensofa/supreme-octo-fortnight/blob/main/Task%205%20CI-CD%20Pipeline/img/Screenshot1.png?raw=true)
+1. Start up your Google Cloud Shell.[^1]
+![](https://github.com/woodensofa/supreme-octo-fortnight/blob/main/Task%205%20CI-CD%20Pipeline/img/Screenshot2.png?raw=true)
 2. Clone the project using ```git clone {your project SSH URL}```.
+![](https://github.com/woodensofa/supreme-octo-fortnight/blob/main/Task%205%20CI-CD%20Pipeline/img/Screenshot.png?raw=true)
 3. We can’t use the docker commands inside the CI/CD pipeline inside GitLab. Instead we’ll use Google Cloud Build to build the container image. 
 Before building the pipeline, we’ll do everything by hand first to make sure it is going to work.
 4. Change to the project directory with ```cd cicd2```.
@@ -30,9 +34,15 @@ Before building the pipeline, we’ll do everything by hand first to make sure i
 You will have to replace PROJECT-ID with your actual GCP project ID.
 6. You can test the image as follows: ```docker run --rm --env PORT=8080 -it -p 8080:8080 gcr.io/PROJECT-ID/cicd2``` *or* 
 Test the app using “Web Preview” in the Cloud Shell environment. When you are satisfied that everything is working, stop the container with *CTRL-C*.
+![](https://github.com/woodensofa/supreme-octo-fortnight/blob/main/Task%205%20CI-CD%20Pipeline/img/Screenshot%20(1).png?raw=true)
+
 7. Finally, deploy the app to Cloud Run as follows: ```gcloud run deploy cicd2 --image gcr.io/PROJECT-ID/cicd2 --platform managed --region us-west1 --allow-unauthenticated```
-The command will output the URL for the deployed app. Test it out in your browser.[^1]
-[^1]: (if command throws error) Here region is "us-west1" in GCP, gitlab region must also be same.
+The command will output the URL for the deployed app. Test it out in your browser.[^2]
+![](https://github.com/woodensofa/supreme-octo-fortnight/blob/main/Task%205%20CI-CD%20Pipeline/img/Screenshot%20(2).png?raw=true)
+
+[^1]: In the Google Cloud Console, on the project selector page, select or create a Google Cloud project.It is a good idea to create a new Project on Google Cloud, as it makes it easy to test and teardown afterward, and also for new projects to separate them from others.
+You can click the button next to the Google Cloud Platform logo and then click "Create Project". In the Cloud Console, activate Cloud Shell.
+[^2]: (if command throws error) Here region is "us-west1" in GCP, gitlab region must also be same.
 
 ### Build the GitLab CI/CD Pipeline
 
