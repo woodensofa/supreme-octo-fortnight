@@ -40,7 +40,7 @@ The next step is the to automate the build and deploy steps with a Gitlab CI/CD 
 
 1. Create a ".gitlab-ci.yml" file in the project directory that defines the pipeline as follows:
 
-```json
+```Ignore List
 default:
     image: google/cloud-sdk:alpine
     before_script:
@@ -56,6 +56,7 @@ deploy:
     script:
         - gcloud run deploy cicd2 --image gcr.io/PROJECT-ID/cicd2 --platform managed --region us-west1 --allow-unauthenticated
 ```
+
 Don’t forget to replace PROJECT-ID with your actual GCP project ID.
 
 The defualt image identifies the default container image to use for the jobs in the pipeline. In this case, we are using the google/cloud-sdk:alpine image because it contains the gcloud command.
