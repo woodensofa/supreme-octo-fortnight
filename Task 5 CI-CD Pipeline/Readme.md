@@ -72,6 +72,7 @@ The default image identifies the default container image to use for the jobs in 
 The default “before_script” contains the list of commands to execute before each job. In this case, we just set the default GCP project.
 
 This pipleine has two jobs named “build” and “deploy”. The “build” job is run during the “build” stage and the “deploy” job is run during the “deploy” stage. “script” lists the commands to be run for the job.
+
 ![](https://github.com/woodensofa/supreme-octo-fortnight/blob/main/Task%205%20CI-CD%20Pipeline/img/Screenshot%20(3).png?raw=true)
 ![](https://github.com/woodensofa/supreme-octo-fortnight/blob/main/Task%205%20CI-CD%20Pipeline/img/Screenshot%20(4).png?raw=true)
 
